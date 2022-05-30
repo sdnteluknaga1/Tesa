@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="dist/css/final.css" rel="stylesheet">
+        <title>instal tailwindcss</title>
+        <script>
+            // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="lg:px-28 absolute top-0 z-10 flex w-full bg-transparent">
+            <div class="container">
+                <div class="relative flex items-center justify-between">
+                    <div class="flex items-center px-4">
+                        <img src="img/logosd.png" alt="logo" class="w-14 mr-1">
+                        <a href="#Home" class="text-wtit block py-6 text-3xl font-bold">TE<span
+                                class="text-wtitt text-base italic">LUKNAGA</span>SA<span
+                                class="text-wtitt text-base italic">TU</span></a>
+                    </div>
+                    <div class="px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="right-4 lg:hidden block">
+                            <span class="hamburger-line duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line duration-300 ease-in-out"></span>
+                            <span class="hamburger-line duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        <!-- nav block -->
+                        <nav id="nav-menu"
+                            class="font-bold hover:scale-100 duration-300 bg-white dark:bg-slate-900 opacity-80 lg:dark:bg-transparent lg:flex lg:bg-transparent absolute py-5 shadow-lg rounded-lg w-[300px] lg:w-full right-4 top-full lg:static lg:shadow-none">
+                            <ul class="lg:flex lg:justify-between block">
+                                <li class="group">
+                                    <a href="#Home"
+                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Beranda</a>
+                                </li>
+                                <li class="group">
+                                    <a href="#About"
+                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Kami</a>
+                                </li>
+                                <li class="group">
+                                    <a href="#Galery"
+                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Galeri</a>
+                                </li>
+                                <li class="group">
+                                    <a href="#Tautan"
+                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Tautan</a>
+                                </li>
+                                <li class="group">
+                                    <a href="#Contact"
+                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Kontak</a>
+                                </li>
+                                <li class="flex items-center justify-center">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="dark:text-wtitt text-wtit w-6 h-6 mr-2" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                                        </svg>
+                                    </span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                                    <label for="dark-toggle">
+                                        <div class="w-9 item-center bg-wtitt flex h-5 p-1 rounded-full cursor-pointer">
+                                            <div
+                                                class="toggle-circle bg-wtit w-4 h-3 py-1 transition duration-300 ease-in-out rounded-full">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="dark:text-wtitt text-wtit w-6 h-6 ml-2" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                        </svg>
+                                    </span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- end nav-block -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Hero Section Start -->
+        <section id="Home" class="pt-20 lg:px-28 h-[700px] dark:bg-slate-900 font-bold">
+            <div class="container pt-20">
+                <div class="flex flex-wrap">
+                    <div class="md:w-1/2 self-center w-full px-4">
+                        <h1 class="lg:text-2xl text-wtit text-xl font-bold">Selamat Datang di -</h1>
+                        <h2 class="lg:text-5xl text-wtitt text-4xl font-bold">SD N<span
+                                class="md:visible lg:text-5xl text-wtit text-4xl italic">EGERI</span> TELUK<span
+                                class="text-wtit italic">NAGA I</span></h1>
+                            <h3 class="lg:text-lg text-wpara hover:text-wtitt text-base font-semibold">Jalan Raya
+                                Kampung
+                                Melayu Desa Teluknaga Kecamatan Teluknaga Kabupaten Tangerang</h1>
+                                <button
+                                    class="ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt lg:w-48 hover:-translate-y-3 hover:shadow-2xl shadow-black hover:shadow-black w-32 py-2 my-2 mt-4 duration-500 rounded-full shadow-xl">
+                                    <a href="#" alt="tombol">
+                                        <h5
+                                            class="text-wtit hover:text-white lg:text-xl text-sm font-extrabold bg-transparent">
+                                            AYO SEKOLAH !</h5>
+                                    </a>
+                                </button>
+                    </div>
+                    <div class="md:w-1/2 md:justify-end flex self-center justify-center w-full px-4">
+                        <div class="lg:mt-9 relative mt-10">
+                            <img src="img/Logo Kab tang.png" alt="logo" class="w-56 max-w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- About Start -->
+        <section id="About" class="lg:px-28 dark:bg-slate-800 pt-20 pb-20">
+            <div class="container">
+                <div class="flex flex-wrap">
+                    <div class="h-max md:w-1/2 w-full p-4">
+                        <h1 class="lg:text-xl text-wtit mt-4 text-xl font-bold">Tentang Kami</h1>
+                        <h2 class="lg:text-4xl text-wtitt text-3xl font-bold">Visi<span class="text-wtit italic">
+                                Kami</span></h2>
+                        <p class="lg:text-base text-wpara hover:text-wtitt mt-2 font-sans text-sm font-semibold">
+                            "Unggul dalam bidang akademik dan non akademik, yang dijiwai oleh nilai-nilai budaya dan
+                            karakter bangsa berlandaskan iman dan takwa"</p>
+                        <h2 class="lg:text-4xl text-wtitt mt-4 text-3xl font-bold">Misi<span class="text-wtit italic">
+                                Kami</span></h2>
+                        <p
+                            class="lg:text-base text-wpara hover:font-extrabold mt-2 font-serif text-sm font-semibold text-center">
+                        <ul style="list-style-image: url('img/list.png')" class="text-wpara block ml-6 leading-10">
+                            <li>Meningkatkan kompetensi Guru melalui pelatihan-pelatihan keguruan.</li>
+                            <li>Membentuk sikap dan prilaku yang disiplin, santun, sopan dan berkarakter.</li>
+                            <li>Mengembangkan sikap religius siswa, didalam dan luar sekolah.</li>
+                            <li>Menciptakan suasana Pembelajaran yang aktif, inovatif, kreatif, efektif, menyenangkan,
+                                gembira dan berbobot</li>
+                            <li>Mengembangkan budaya literasi pada seluruh warga sekolah.</li>
+                            <li>Mewujudkan suasana kekeluargaan antar warga sekolah.</li>
+                            <li>Mewujudkan lingkungan sekolah bersih, aman, dan nyaman.</li>
+                            <li>Menanamkan kepedulian sosial dan lingkungan, serta nasionalisme.</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="h-max md:w-1/2 w-full p-4">
+                        <h2 class="lg:text-4xl text-wtitt mt-4 text-3xl font-bold">Tujuan<span class="text-wtit italic">
+                                Kami</span></h2>
+                        <p class="lg:text-base text-wpara hover:font-extrabold mt-2 font-sans text-sm font-semibold">
+                        <ul style="list-style-image: url('img/list.png')" class="text-wpara block ml-6 leading-8">
+                            <li>
+                                Terwujudnya budaya sekolah yang religius, jujur disiplin dan mandiri melalui kegiatan
+                                intrakurikuler, kokurikuler, dan ekstrakurikuler ,
+                            </li>
+                            <li>
+                                Terbentuknya peserta didik yang cerdas, terampil, berkarakter dan dapat melanjutkan
+                                pendidikan ke jenjang yang lebih tinggi
+                            </li>
+                            <li>
+                                Meningkatnya prestasi peserta didik di bidang Olimpiade baik dibidang Akademis maupun
+                                non-akademis.
+                            </li>
+                            <li>
+                                Terwujudnya sekolah yang berwawasan lingkungan dan ramah anak dengan berlandaskan budaya
+                                nasional dan kearifan lokal melalui pembelajaran.
+                            </li>
+                        </ul>
+                        </p>
+                        <div class="flex flex-row-reverse items-center ml-6">
+                            <!-- whatsapp -->
+                            <button class="bg-wtit w-36 flex items-center justify-around p-1 my-2 rounded-full">
+                                <h5 class="lg:text-sm text-xs font-extrabold text-white">Kontak Kami</h5>
+                                <!-- youtube -->
+                                <a href="#" target="_blank"
+                                    class="w-7 h-7 md:w-9 md:h-9 border-wtitt hover:border-0 hover:bg-transparent text-wtitt hover:text-green-500 flex items-center justify-center duration-300 border-2 rounded-full">
+                                    <svg role="img" width="20"
+                                        class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <title>WhatsApp</title>
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                    </svg>
+                                </a>
+                            </button>
+                            <!-- youtube -->
+                            <a href="#" target="_blank"
+                                class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-red-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                                <svg role="img" width="20"
+                                    class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>YouTube</title>
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12
+                            3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 
+                            3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                            <!-- instagram -->
+                            <a href="#" target="_blank"
+                                class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-pink-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                                <svg role="img" width="20"
+                                    class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Instagram</title>
+                                    <path
+                                        d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 
+                            3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 
+                            1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 
+                            8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                                </svg>
+                            </a>
+                            <!-- facebook -->
+                            <a href="#" target="_blank"
+                                class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-blue-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                                <svg role="img" width="20"
+                                    class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Facebook</title>
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 
+                            1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About End -->
+
+        <!-- Galery Start -->
+        <section id="Galery" class="lg:px-28 dark:bg-slate-900 pt-20 pb-20">
+            <div class="container">
+                <div class="w-full px-4 text-center">
+                    <h1 class="lg:text-2xl text-wtit text-xl font-bold">Dokumenasi</h1>
+                    <h2 class="lg:text-5xl text-wtitt text-4xl font-bold">Kegiatan <span
+                            class="md:visible lg:text-5xl text-wtit text-4xl italic">Sekolah</span> Te<span
+                            class="text-wtit italic">sa</span></h2>
+                    <p class="md:w-[80%] mx-auto text-sm lg:text-base text-wpara font-semibold mt-2 font-sans">
+                        Dokumentasi berbagai kegiatan yang telah dilaksanakan SDN Teluknaga I
+                    </p>
+                    <button
+                        class="ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt lg:w-48 hover:-translate-y-3 hover:shadow-2xl shadow-black hover:shadow-black w-32 py-2 my-2 mt-4 duration-500 rounded-full shadow-xl">
+                        <a href="#" alt="tombol">
+                            <h5 class="text-wtit hover:text-white lg:text-xl text-sm font-extrabold bg-transparent">AYO
+                                SEKOLAH !</h5>
+                        </a>
+                    </button>
+                </div>
+                <!-- FOTO DOKUMENTASI -->
+                <div class="flex flex-wrap mt-5">
+                    <div
+                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        <div
+                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            <img src="dist/dok/anbk.jpeg" alt="logo" class="rounded-2xl max-w-full pb-2">
+                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Asesmen Nasional Berbasis
+                                Komputer</h1>
+                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                                Kegiatan Khusus kelas 5 SD, dengan siswa sampling yang diambil oleh Kemendikbud</h1>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        <div
+                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            <img src="dist/dok/hut pramuka.jpeg" alt="logo" class="rounded-2xl max-w-full pb-2">
+                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Hari ulang tahun Pramuka</h1>
+                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                                Kegiatan Kemah memeriahkan Hut pramuka
+                                </h1>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        <div
+                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            <img src="dist/dok/vaksinasi.jpg" alt="logo" class="max-w-full pb-2 rounded-md">
+                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Kegiatan Vaksinasi Siswa</h1>
+                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                                Kegiatan Vaksinasi siswa yang dihadiri oleh Bupati Tangerang, Bapak H. ZAKI ISKANDAR
+                                </h1>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        <div
+                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            <img src="dist/dok/catur.jpeg" alt="logo" class="max-w-full pb-2 rounded-md">
+                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">O2SN Kecamatan</h1>
+                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                                kegiatan O2SN Kecamatan Teluknaga
+                                </h1>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        <div
+                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            <img src="dist/dok/footsal bm.jpeg" alt="logo" class="max-w-full pb-2 rounded-md">
+                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Footsal</h1>
+                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                                Kegiatan Footsal Open antar SD
+                            </h3>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        <div
+                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            <img src="dist/dok/voli bm.jpeg" alt="logo" class="max-w-full pb-2 rounded-md">
+                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Voli</h1>
+                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                                Kegiatan Voli-ball Open antar SD
+                                </h1>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        <div
+                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            <img src="dist/dok/api unggun.jpeg" alt="logo" class="max-w-full pb-2 rounded-md">
+                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Api Unggun</h1>
+                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                                Kegiatan ekstrakurikuler Kepramukaan Tesa
+                                </h1>
+                        </div>
+                    </div>
+                    <!-- END FOTODOKUMENTASI -->
+                </div>
+            </div>
+        </section>
+        <!-- Galery End -->
+
+        <!-- Tautan -->
+        <section id="Tautan" class="lg:px-28 bg-slate-800 dark:bg-sl ate-00 pt-20 pb-20">
+            <div class="container">
+                <div class="w-full px-4 text-center">
+                    <h1 class="lg:text-2xl text-wtit text-xl font-bold">Tautan</h1>
+                    <h2 class="lg:text-5xl text-wtitt text-4xl font-bold">Link<span
+                            class="md:visible lg:text-5xl text-wtit text-4xl italic"> Penti</span>ng<span
+                            class="text-wtit italic"> Kedinasan</span></h2>
+                    <p class="md:w-[80%] mx-auto text-sm lg:text-base text-wpara font-semibold mt-2 font-sans">
+                        Link pendataan Dalam Jaringan (Online) untuk Sekolah, Pendidik dan Tenaga Kependidikan, serta
+                        Peserta Didik</p>
+                </div>
+                <!-- Link -->
+                <div class="mt-5">
+                    <h1 class="lg:text-2xl text-wtit text-xl font-bold text-center">Link Pendataan Sekolah</h1>
+                    <div class="flex flex-wrap mt-2">
+                        <div class="h-max flex flex-wrap self-center w-full px-4 py-4 mx-auto">
+                            <div
+                                class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
+                                <img src="img/Logo Kab tang.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <a href="https://simasn.tangerangkab.go.id/" alt="tombol" target="_blank">
+                                    <h4
+                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        SIM ASN</h4>
+                                </a>
+                            </div>
+                            <div
+                                class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
+                                <img src="img/Logo ANBK.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <a href="https://anbk.kemdikbud.go.id/" alt="tombol" target="_blank">
+                                    <h4
+                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        A N B K</h4>
+                                </a>
+                            </div>
+                            <div
+                                class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
+                                <img src="img/Logo Dapodik.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <a href="https://dapo.kemdikbud.go.id/" alt="tombol" target="_blank">
+                                    <h4
+                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        DAPODIK</h4>
+                                </a>
+                            </div>
+                            <div
+                                class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
+                                <img src="img/Logo BOS.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <a href="https://bos.kemdikbud.go.id/portal/welcome" alt="tombol" target="_blank">
+                                    <h4
+                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        BOS ONLINE</h4>
+                                </a>
+                            </div>
+                            <div
+                                class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
+                                <img src="img/Logo Mysapk.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <a href="https://mysapk.bkn.go.id/" alt="tombol" target="_blank">
+                                    <h4
+                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        MY SAPK</h4>
+                                </a>
+                            </div>
+                            <div
+                                class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
+                                <img src="img/Logo NISN.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <a href="https://nisn.data.kemdikbud.go.id/" alt="tombol" target="_blank">
+                                    <h4
+                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        N I S N</h4>
+                                </a>
+                            </div>
+                            <div
+                                class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
+                                <img src="img/Logo ARKAS.PNG" alt="logo" class="h-14 pb-2 mx-auto">
+                                <a href="https://arkas.kemdikbud.go.id/" alt="tombol" target="_blank">
+                                    <h4
+                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        ARKAS</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Link End -->
+        </section>
+        <!-- Tautan End -->
+
+        <!-- Contact -->
+        <section id="Contact" class="lg:px-32 dark:bg-slate-700 pt-20 pb-20">
+            <div class="container">
+                <div class="w-full px-4">
+                    <h1 class="lg:text-2xl text-wtit text-xl font-bold text-center">Contact</h1>
+                    <h2 class="lg:text-5xl text-wtitt text-4xl font-bold text-center">Hubungi<span
+                            class="md:visible lg:text-5xl text-wtit text-4xl italic"> Kami</span></h2>
+                    <p
+                        class="md:w-[50%] mx-auto text-sm text-center lg:text-base text-wpara font-semibold mt-2 font-sans">
+                        Kirimkan pertanyaan anda seputar Sekolah dengan mengisi form Kontak dibawah ini</p>
+                    <form class="pt-5">
+                        <div class="pb-4">
+                            <label for="name" class="text-wtit text-base font-bold">Nama</label>
+                            <input type="text" id="name"
+                                class="bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt w-full h-8 p-3 rounded-md shadow-sm">
+                        </div>
+                        <div class="pb-4">
+                            <label for="email" class="text-wtit text-base font-bold">E-Mail</label>
+                            <input type="email" id="email"
+                                class="bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt w-full h-8 p-3 rounded-md shadow-sm">
+                        </div>
+                        <div class="pb-4">
+                            <label for="message" class="text-wtit text-base font-bold">Pesan</label>
+                            <textarea type="email" id="name"
+                                class="h-44 bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt w-full p-3 rounded-md shadow-sm"></textarea>
+                        </div>
+                        <button
+                            class="ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt hover:-translate-y-2 hover:shadow-2xl shadow-black hover:shadow-black flex w-2/3 py-2 mx-auto my-2 duration-500 rounded-full shadow-xl">
+                            <a href="#" alt="tombol" class="flex mx-auto">
+                                <h5 class="text-wtit hover:text-white lg:text-xl text-sm font-extrabold">Kirim Pesan
+                                </h5>
+                            </a>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Contact End -->
+
+        <!-- Footer -->
+        <section id="Footer" class="lg:px-28 bg-slate-900 pt-20">
+            <div class="container">
+                <div class="flex flex-wrap py-10">
+                    <div class="text-wpara md:w-1/3 w-full px-4 py-5">
+                        <h2 class="text-3xl text-white">TESA-1972</h2>
+                        <h4 class="pt-2">Hubungi Kami</h4>
+                        <p>sdn.teluknaga1@gmail.com</p>
+                        <p>Jl. Raya Kampung Melayu Desa Teluknaga Kecamatan Teluknaga</p>
+                        <p>Kabupaten Tangerang</p>
+                    </div>
+                    <div class="md:w-1/3 w-full px-4 py-5">
+                        <h2 class="md:text-center pb-4 text-white">Clients</h2>
+                        <li class="md:text-center list-none">
+                            <a href="https://www.kemdikbud.go.id" target="_blank"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Kemendikbud
+                                RI</a>
+                        </li>
+                        <li class="md:text-center list-none">
+                            <a href="https://tangerangkab.go.id/" target="_blank"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Kabupaten
+                                Tangerang</a>
+                        </li>
+                        <li class="md:text-center list-none">
+                            <a href="https://tangerangkab.go.id/teluknaga" target="_blank"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Kecamatan
+                                Teluknaga</a>
+                        </li>
+                        <li class="md:text-center list-none">
+                            <a href="#Home" target="_blank"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">SDN
+                                Teluknaga I</a>
+                        </li>
+                    </div>
+                    <div class="md:w-1/3 w-full px-4 py-5">
+                        <h2 class="lg:text-right pb-4 text-white">Tautan</h2>
+                        <li class="lg:text-right list-none">
+                            <a href="#Home"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Beranda</a>
+                        </li>
+                        <li class="lg:text-right list-none">
+                            <a href="#About"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Tentang
+                                Kami</a>
+                        </li>
+                        <li class="lg:text-right list-none">
+                            <a href="#Galery"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Galery</a>
+                        </li>
+                        <li class="lg:text-right list-none">
+                            <a href="#Tautan"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Clients</a>
+                        </li>
+                        <li class="lg:text-right list-none">
+                            <a href="#Contact"
+                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Contact</a>
+                        </li>
+                    </div>
+                </div>
+                <div class="border-wpara w-full pb-10 mx-auto border-t-2">
+                    <div class="flex items-center justify-center mt-5 mb-5">
+                        <!-- youtube -->
+                        <a href="#" target="_blank"
+                            class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-red-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                            <svg role="img" width="20"
+                                class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>YouTube</title>
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12
+                        3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 
+                        3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <!-- instagram -->
+                        <a href="#" target="_blank"
+                            class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-pink-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                            <svg role="img" width="20"
+                                class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>Instagram</title>
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 
+                        3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 
+                        1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 
+                        8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                            </svg>
+                        </a>
+                        <!-- facebook -->
+                        <a href="#" target="_blank"
+                            class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-blue-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                            <svg role="img" width="20"
+                                class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>Facebook</title>
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 
+                        1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-wpara text-xs text-center">Copyright © 2022 SD NEGERI TELUKNAGA I All rights reserved
+                    </p>
+                    <p class="text-wpara text-xs text-center">Powered by <span><a href="https://tailwindcss.com/"
+                                class="hover:text-wtitt">Tailwind CSS 3</a></span></p>
+                </div>
+            </div>
+        </section>
+        <!-- Footer End -->
+
+        <!-- Back -->
+        <a href="#Home" id="to-top" class="fixed hidden bottom-2 right-2 z-[9999] rounded-2xl">
+            <img src="img/logosd.png" alt="atas" class="w-14 h-14 hover:scale-90 duration-200">
+        </a>
+        <!-- Back -->
+
+        <script src="dist/js/script.js"></script>
+    </body>
+
+</html>
