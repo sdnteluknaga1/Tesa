@@ -5,8 +5,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
         <link href="dist/css/final.css" rel="stylesheet">
-        <title>instal tailwindcss</title>
+        <title>SDN TELUKNAGA I</title>
         <script>
             // On page load or when changing themes, best to add inline in `head` to avoid FOUC
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -18,50 +19,51 @@
     </head>
 
     <body>
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
         <!-- Header -->
-        <header class="lg:px-28 absolute top-0 z-10 flex w-full bg-transparent">
+        <header class="absolute top-0 z-10 flex w-full bg-transparent lg:px-28">
             <div class="container">
                 <div class="relative flex items-center justify-between">
                     <div class="flex items-center px-4">
-                        <img src="img/logosd.png" alt="logo" class="w-14 mr-1">
-                        <a href="#Home" class="text-wtit block py-6 text-3xl font-bold">TE<span
-                                class="text-wtitt text-base italic">LUKNAGA</span>SA<span
-                                class="text-wtitt text-base italic">TU</span></a>
+                        <img src="img/logosd.png" alt="logo" class="mr-1 w-14">
+                        <a href="#Home" class="block py-6 text-3xl font-bold text-wtit">TE<span
+                                class="text-base italic text-wtitt">LUKNAGA</span>SA<span
+                                class="text-base italic text-wtitt">TU</span></a>
                     </div>
                     <div class="px-4">
-                        <button id="hamburger" name="hamburger" type="button" class="right-4 lg:hidden block">
-                            <span class="hamburger-line duration-300 ease-in-out origin-top-left"></span>
-                            <span class="hamburger-line duration-300 ease-in-out"></span>
-                            <span class="hamburger-line duration-300 ease-in-out origin-bottom-left"></span>
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 lg:hidden">
+                            <span class="duration-300 ease-in-out origin-top-left hamburger-line"></span>
+                            <span class="duration-300 ease-in-out hamburger-line"></span>
+                            <span class="duration-300 ease-in-out origin-bottom-left hamburger-line"></span>
                         </button>
                         <!-- nav block -->
                         <nav id="nav-menu"
-                            class="font-bold hover:scale-100 duration-300 bg-white dark:bg-slate-900 opacity-80 lg:dark:bg-transparent lg:flex lg:bg-transparent absolute py-5 shadow-lg rounded-lg w-[300px] lg:w-full right-4 top-full lg:static lg:shadow-none">
-                            <ul class="lg:flex lg:justify-between block">
+                            class="hidden font-bold hover:scale-100 duration-300 bg-white dark:bg-slate-900 opacity-80 lg:dark:bg-transparent lg:flex lg:bg-transparent absolute py-5 shadow-lg rounded-lg w-[300px] lg:w-full right-4 top-full lg:static lg:shadow-none">
+                            <ul class="block lg:flex lg:justify-between">
                                 <li class="group">
                                     <a href="#Home"
-                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Beranda</a>
+                                        class="flex py-2 mx-8 text-base text-wtit hover:text-wtitt">Beranda</a>
                                 </li>
                                 <li class="group">
                                     <a href="#About"
-                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Kami</a>
+                                        class="flex py-2 mx-8 text-base text-wtit hover:text-wtitt">Kami</a>
                                 </li>
                                 <li class="group">
                                     <a href="#Galery"
-                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Galeri</a>
+                                        class="flex py-2 mx-8 text-base text-wtit hover:text-wtitt">Galeri</a>
                                 </li>
                                 <li class="group">
                                     <a href="#Tautan"
-                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Tautan</a>
+                                        class="flex py-2 mx-8 text-base text-wtit hover:text-wtitt">Tautan</a>
                                 </li>
                                 <li class="group">
                                     <a href="#Contact"
-                                        class="text-wtit hover:text-wtitt flex py-2 mx-8 text-base">Kontak</a>
+                                        class="flex py-2 mx-8 text-base text-wtit hover:text-wtitt">Kontak</a>
                                 </li>
                                 <li class="flex items-center justify-center">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="dark:text-wtitt text-wtit w-6 h-6 mr-2" fill="none"
+                                            class="w-6 h-6 mr-2 dark:text-wtitt text-wtit" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -69,15 +71,15 @@
                                     </span>
                                     <input type="checkbox" class="hidden" id="dark-toggle" />
                                     <label for="dark-toggle">
-                                        <div class="w-9 item-center bg-wtitt flex h-5 p-1 rounded-full cursor-pointer">
+                                        <div class="flex h-5 p-1 rounded-full cursor-pointer w-9 item-center bg-wtitt">
                                             <div
-                                                class="toggle-circle bg-wtit w-4 h-3 py-1 transition duration-300 ease-in-out rounded-full">
+                                                class="w-4 h-3 py-1 transition duration-300 ease-in-out rounded-full toggle-circle bg-wtit">
                                             </div>
                                         </div>
                                     </label>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="dark:text-wtitt text-wtit w-6 h-6 ml-2" fill="none"
+                                            class="w-6 h-6 ml-2 dark:text-wtitt text-wtit" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
@@ -97,25 +99,25 @@
         <section id="Home" class="pt-20 lg:px-28 h-[700px] dark:bg-slate-900 font-bold">
             <div class="container pt-20">
                 <div class="flex flex-wrap">
-                    <div class="md:w-1/2 self-center w-full px-4">
-                        <h1 class="lg:text-2xl text-wtit text-xl font-bold">Selamat Datang di -</h1>
-                        <h2 class="lg:text-5xl text-wtitt text-4xl font-bold">SD N<span
-                                class="md:visible lg:text-5xl text-wtit text-4xl italic">EGERI</span> TELUK<span
-                                class="text-wtit italic">NAGA I</span></h1>
-                            <h3 class="lg:text-lg text-wpara hover:text-wtitt text-base font-semibold">Jalan Raya
+                    <div class="self-center w-full px-4 md:w-1/2">
+                        <h1 class="text-xl font-bold lg:text-2xl text-wtit">Selamat Datang di -</h1>
+                        <h2 class="text-4xl font-bold lg:text-5xl text-wtitt">SD N<span
+                                class="text-4xl italic md:visible lg:text-5xl text-wtit">EGERI</span> TELUK<span
+                                class="italic text-wtit">NAGA I</span></h1>
+                            <h3 class="text-base font-semibold lg:text-lg text-wpara hover:text-wtitt">Jalan Raya
                                 Kampung
                                 Melayu Desa Teluknaga Kecamatan Teluknaga Kabupaten Tangerang</h1>
                                 <button
-                                    class="ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt lg:w-48 hover:-translate-y-3 hover:shadow-2xl shadow-black hover:shadow-black w-32 py-2 my-2 mt-4 duration-500 rounded-full shadow-xl">
+                                    class="w-32 py-2 my-2 mt-4 duration-500 rounded-full shadow-xl ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt lg:w-48 hover:-translate-y-3 hover:shadow-2xl shadow-black hover:shadow-black">
                                     <a href="#" alt="tombol">
                                         <h5
-                                            class="text-wtit hover:text-white lg:text-xl text-sm font-extrabold bg-transparent">
+                                            class="text-sm font-extrabold bg-transparent text-wtit hover:text-white lg:text-xl">
                                             AYO SEKOLAH !</h5>
                                     </a>
                                 </button>
                     </div>
-                    <div class="md:w-1/2 md:justify-end flex self-center justify-center w-full px-4">
-                        <div class="lg:mt-9 relative mt-10">
+                    <div class="flex self-center justify-center w-full px-4 md:w-1/2 md:justify-end">
+                        <div class="relative mt-10 lg:mt-9">
                             <img src="img/Logo Kab tang.png" alt="logo" class="w-56 max-w-full">
                         </div>
                     </div>
@@ -125,21 +127,21 @@
         <!-- Hero Section End -->
 
         <!-- About Start -->
-        <section id="About" class="lg:px-28 dark:bg-slate-800 pt-20 pb-20">
+        <section id="About" class="pt-20 pb-20 lg:px-28 dark:bg-slate-800">
             <div class="container">
                 <div class="flex flex-wrap">
-                    <div class="h-max md:w-1/2 w-full p-4">
-                        <h1 class="lg:text-xl text-wtit mt-4 text-xl font-bold">Tentang Kami</h1>
-                        <h2 class="lg:text-4xl text-wtitt text-3xl font-bold">Visi<span class="text-wtit italic">
+                    <div class="w-full p-4 h-max md:w-1/2">
+                        <h1 class="mt-4 text-xl font-bold lg:text-xl text-wtit">Tentang Kami</h1>
+                        <h2 class="text-3xl font-bold lg:text-4xl text-wtitt">Visi<span class="italic text-wtit">
                                 Kami</span></h2>
-                        <p class="lg:text-base text-wpara hover:text-wtitt mt-2 font-sans text-sm font-semibold">
+                        <p class="mt-2 font-sans text-sm font-semibold lg:text-base text-wpara hover:text-wtitt">
                             "Unggul dalam bidang akademik dan non akademik, yang dijiwai oleh nilai-nilai budaya dan
                             karakter bangsa berlandaskan iman dan takwa"</p>
-                        <h2 class="lg:text-4xl text-wtitt mt-4 text-3xl font-bold">Misi<span class="text-wtit italic">
+                        <h2 class="mt-4 text-3xl font-bold lg:text-4xl text-wtitt">Misi<span class="italic text-wtit">
                                 Kami</span></h2>
                         <p
-                            class="lg:text-base text-wpara hover:font-extrabold mt-2 font-serif text-sm font-semibold text-center">
-                        <ul style="list-style-image: url('img/list.png')" class="text-wpara block ml-6 leading-10">
+                            class="mt-2 font-serif text-sm font-semibold text-center lg:text-base text-wpara hover:font-extrabold">
+                        <ul style="list-style-image: url('img/list.png')" class="block ml-6 leading-10 text-wpara">
                             <li>Meningkatkan kompetensi Guru melalui pelatihan-pelatihan keguruan.</li>
                             <li>Membentuk sikap dan prilaku yang disiplin, santun, sopan dan berkarakter.</li>
                             <li>Mengembangkan sikap religius siswa, didalam dan luar sekolah.</li>
@@ -152,11 +154,11 @@
                         </ul>
                         </p>
                     </div>
-                    <div class="h-max md:w-1/2 w-full p-4">
-                        <h2 class="lg:text-4xl text-wtitt mt-4 text-3xl font-bold">Tujuan<span class="text-wtit italic">
+                    <div class="w-full p-4 h-max md:w-1/2">
+                        <h2 class="mt-4 text-3xl font-bold lg:text-4xl text-wtitt">Tujuan<span class="italic text-wtit">
                                 Kami</span></h2>
-                        <p class="lg:text-base text-wpara hover:font-extrabold mt-2 font-sans text-sm font-semibold">
-                        <ul style="list-style-image: url('img/list.png')" class="text-wpara block ml-6 leading-8">
+                        <p class="mt-2 font-sans text-sm font-semibold lg:text-base text-wpara hover:font-extrabold">
+                        <ul style="list-style-image: url('img/list.png')" class="block ml-6 leading-8 text-wpara">
                             <li>
                                 Terwujudnya budaya sekolah yang religius, jujur disiplin dan mandiri melalui kegiatan
                                 intrakurikuler, kokurikuler, dan ekstrakurikuler ,
@@ -177,13 +179,13 @@
                         </p>
                         <div class="flex flex-row-reverse items-center ml-6">
                             <!-- whatsapp -->
-                            <button class="bg-wtit w-36 flex items-center justify-around p-1 my-2 rounded-full">
-                                <h5 class="lg:text-sm text-xs font-extrabold text-white">Kontak Kami</h5>
+                            <button class="flex items-center justify-around p-1 my-2 rounded-full bg-wtit w-36">
+                                <h5 class="text-xs font-extrabold text-white lg:text-sm">Kontak Kami</h5>
                                 <!-- youtube -->
                                 <a href="#" target="_blank"
-                                    class="w-7 h-7 md:w-9 md:h-9 border-wtitt hover:border-0 hover:bg-transparent text-wtitt hover:text-green-500 flex items-center justify-center duration-300 border-2 rounded-full">
+                                    class="flex items-center justify-center duration-300 border-2 rounded-full w-7 h-7 md:w-9 md:h-9 border-wtitt hover:border-0 hover:bg-transparent text-wtitt hover:text-green-500">
                                     <svg role="img" width="20"
-                                        class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                        class="duration-300 fill-current hover:scale-150 hover:rotate-12 hover:-translate-y-3"
                                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <title>WhatsApp</title>
                                         <path
@@ -193,9 +195,9 @@
                             </button>
                             <!-- youtube -->
                             <a href="#" target="_blank"
-                                class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-red-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                                class="flex items-center justify-center mr-1 duration-300 border-2 rounded-full w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-red-700">
                                 <svg role="img" width="20"
-                                    class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                    class="duration-300 fill-current hover:scale-150 hover:rotate-12 hover:-translate-y-3"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <title>YouTube</title>
                                     <path
@@ -206,9 +208,9 @@
                             </a>
                             <!-- instagram -->
                             <a href="#" target="_blank"
-                                class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-pink-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                                class="flex items-center justify-center mr-1 duration-300 border-2 rounded-full w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-pink-700">
                                 <svg role="img" width="20"
-                                    class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                    class="duration-300 fill-current hover:scale-150 hover:rotate-12 hover:-translate-y-3"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <title>Instagram</title>
                                     <path
@@ -220,9 +222,9 @@
                             </a>
                             <!-- facebook -->
                             <a href="#" target="_blank"
-                                class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-blue-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                                class="flex items-center justify-center mr-1 duration-300 border-2 rounded-full w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-blue-700">
                                 <svg role="img" width="20"
-                                    class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                    class="duration-300 fill-current hover:scale-150 hover:rotate-12 hover:-translate-y-3"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <title>Facebook</title>
                                     <path
@@ -238,20 +240,20 @@
         <!-- About End -->
 
         <!-- Galery Start -->
-        <section id="Galery" class="lg:px-28 dark:bg-slate-900 pt-20 pb-20">
+        <section id="Galery" class="pt-20 pb-20 lg:px-28 dark:bg-slate-900">
             <div class="container">
                 <div class="w-full px-4 text-center">
-                    <h1 class="lg:text-2xl text-wtit text-xl font-bold">Dokumenasi</h1>
-                    <h2 class="lg:text-5xl text-wtitt text-4xl font-bold">Kegiatan <span
-                            class="md:visible lg:text-5xl text-wtit text-4xl italic">Sekolah</span> Te<span
-                            class="text-wtit italic">sa</span></h2>
+                    <h1 class="text-xl font-bold lg:text-2xl text-wtit">Dokumenasi</h1>
+                    <h2 class="text-4xl font-bold lg:text-5xl text-wtitt">Kegiatan <span
+                            class="text-4xl italic md:visible lg:text-5xl text-wtit">Sekolah</span> Te<span
+                            class="italic text-wtit">sa</span></h2>
                     <p class="md:w-[80%] mx-auto text-sm lg:text-base text-wpara font-semibold mt-2 font-sans">
                         Dokumentasi berbagai kegiatan yang telah dilaksanakan SDN Teluknaga I
                     </p>
                     <button
-                        class="ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt lg:w-48 hover:-translate-y-3 hover:shadow-2xl shadow-black hover:shadow-black w-32 py-2 my-2 mt-4 duration-500 rounded-full shadow-xl">
+                        class="w-32 py-2 my-2 mt-4 duration-500 rounded-full shadow-xl ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt lg:w-48 hover:-translate-y-3 hover:shadow-2xl shadow-black hover:shadow-black">
                         <a href="#" alt="tombol">
-                            <h5 class="text-wtit hover:text-white lg:text-xl text-sm font-extrabold bg-transparent">AYO
+                            <h5 class="text-sm font-extrabold bg-transparent text-wtit hover:text-white lg:text-xl">AYO
                                 SEKOLAH !</h5>
                         </a>
                     </button>
@@ -259,78 +261,78 @@
                 <!-- FOTO DOKUMENTASI -->
                 <div class="flex flex-wrap mt-5">
                     <div
-                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        class="flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300 md:w-1/2 hover:scale-110">
                         <div
-                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
-                            <img src="dist/dok/anbk.jpeg" alt="logo" class="rounded-2xl max-w-full pb-2">
-                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Asesmen Nasional Berbasis
+                            class="relative pb-4 duration-500 bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4">
+                            <img src="dist/dok/anbk.jpeg" alt="logo" class="max-w-full pb-2 rounded-2xl">
+                            <h1 class="text-lg font-bold text-center lg:text-xl text-wtit">Asesmen Nasional Berbasis
                                 Komputer</h1>
-                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                            <h3 class="px-2 text-sm font-semibold text-center lg:text-base text-wpara hover:text-wtitt">
                                 Kegiatan Khusus kelas 5 SD, dengan siswa sampling yang diambil oleh Kemendikbud</h1>
                         </div>
                     </div>
                     <div
-                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        class="flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300 md:w-1/2 hover:scale-110">
                         <div
-                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
-                            <img src="dist/dok/hut pramuka.jpeg" alt="logo" class="rounded-2xl max-w-full pb-2">
-                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Hari ulang tahun Pramuka</h1>
-                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                            class="relative pb-4 duration-500 bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4">
+                            <img src="dist/dok/hut pramuka.jpeg" alt="logo" class="max-w-full pb-2 rounded-2xl">
+                            <h1 class="text-lg font-bold text-center lg:text-xl text-wtit">Hari ulang tahun Pramuka</h1>
+                            <h3 class="px-2 text-sm font-semibold text-center lg:text-base text-wpara hover:text-wtitt">
                                 Kegiatan Kemah memeriahkan Hut pramuka
                                 </h1>
                         </div>
                     </div>
                     <div
-                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        class="flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300 md:w-1/2 hover:scale-110">
                         <div
-                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            class="relative pb-4 duration-500 bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4">
                             <img src="dist/dok/vaksinasi.jpg" alt="logo" class="max-w-full pb-2 rounded-md">
-                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Kegiatan Vaksinasi Siswa</h1>
-                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                            <h1 class="text-lg font-bold text-center lg:text-xl text-wtit">Kegiatan Vaksinasi Siswa</h1>
+                            <h3 class="px-2 text-sm font-semibold text-center lg:text-base text-wpara hover:text-wtitt">
                                 Kegiatan Vaksinasi siswa yang dihadiri oleh Bupati Tangerang, Bapak H. ZAKI ISKANDAR
                                 </h1>
                         </div>
                     </div>
                     <div
-                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        class="flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300 md:w-1/2 hover:scale-110">
                         <div
-                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            class="relative pb-4 duration-500 bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4">
                             <img src="dist/dok/catur.jpeg" alt="logo" class="max-w-full pb-2 rounded-md">
-                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">O2SN Kecamatan</h1>
-                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                            <h1 class="text-lg font-bold text-center lg:text-xl text-wtit">O2SN Kecamatan</h1>
+                            <h3 class="px-2 text-sm font-semibold text-center lg:text-base text-wpara hover:text-wtitt">
                                 kegiatan O2SN Kecamatan Teluknaga
                                 </h1>
                         </div>
                     </div>
                     <div
-                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        class="flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300 md:w-1/2 hover:scale-110">
                         <div
-                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            class="relative pb-4 duration-500 bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4">
                             <img src="dist/dok/footsal bm.jpeg" alt="logo" class="max-w-full pb-2 rounded-md">
-                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Footsal</h1>
-                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                            <h1 class="text-lg font-bold text-center lg:text-xl text-wtit">Footsal</h1>
+                            <h3 class="px-2 text-sm font-semibold text-center lg:text-base text-wpara hover:text-wtitt">
                                 Kegiatan Footsal Open antar SD
                             </h3>
                         </div>
                     </div>
                     <div
-                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        class="flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300 md:w-1/2 hover:scale-110">
                         <div
-                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            class="relative pb-4 duration-500 bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4">
                             <img src="dist/dok/voli bm.jpeg" alt="logo" class="max-w-full pb-2 rounded-md">
-                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Voli</h1>
-                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                            <h1 class="text-lg font-bold text-center lg:text-xl text-wtit">Voli</h1>
+                            <h3 class="px-2 text-sm font-semibold text-center lg:text-base text-wpara hover:text-wtitt">
                                 Kegiatan Voli-ball Open antar SD
                                 </h1>
                         </div>
                     </div>
                     <div
-                        class="md:w-1/2 hover:scale-110 flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300">
+                        class="flex self-start justify-center w-full px-4 py-4 mx-auto transition duration-300 md:w-1/2 hover:scale-110">
                         <div
-                            class="bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4 relative pb-4 duration-500">
+                            class="relative pb-4 duration-500 bg-transparant h-max rounded-2xl hover:shadow-lg hover:shadow-black hover:-translate-y-4">
                             <img src="dist/dok/api unggun.jpeg" alt="logo" class="max-w-full pb-2 rounded-md">
-                            <h1 class="lg:text-xl text-wtit text-lg font-bold text-center">Api Unggun</h1>
-                            <h3 class="lg:text-base text-wpara hover:text-wtitt px-2 text-sm font-semibold text-center">
+                            <h1 class="text-lg font-bold text-center lg:text-xl text-wtit">Api Unggun</h1>
+                            <h3 class="px-2 text-sm font-semibold text-center lg:text-base text-wpara hover:text-wtitt">
                                 Kegiatan ekstrakurikuler Kepramukaan Tesa
                                 </h1>
                         </div>
@@ -342,82 +344,82 @@
         <!-- Galery End -->
 
         <!-- Tautan -->
-        <section id="Tautan" class="lg:px-28 bg-slate-800 dark:bg-sl ate-00 pt-20 pb-20">
+        <section id="Tautan" class="pt-20 pb-20 lg:px-28 bg-slate-800 dark:bg-sl ate-00">
             <div class="container">
                 <div class="w-full px-4 text-center">
-                    <h1 class="lg:text-2xl text-wtit text-xl font-bold">Tautan</h1>
-                    <h2 class="lg:text-5xl text-wtitt text-4xl font-bold">Link<span
-                            class="md:visible lg:text-5xl text-wtit text-4xl italic"> Penti</span>ng<span
-                            class="text-wtit italic"> Kedinasan</span></h2>
+                    <h1 class="text-xl font-bold lg:text-2xl text-wtit">Tautan</h1>
+                    <h2 class="text-4xl font-bold lg:text-5xl text-wtitt">Link<span
+                            class="text-4xl italic md:visible lg:text-5xl text-wtit"> Penti</span>ng<span
+                            class="italic text-wtit"> Kedinasan</span></h2>
                     <p class="md:w-[80%] mx-auto text-sm lg:text-base text-wpara font-semibold mt-2 font-sans">
                         Link pendataan Dalam Jaringan (Online) untuk Sekolah, Pendidik dan Tenaga Kependidikan, serta
                         Peserta Didik</p>
                 </div>
                 <!-- Link -->
                 <div class="mt-5">
-                    <h1 class="lg:text-2xl text-wtit text-xl font-bold text-center">Link Pendataan Sekolah</h1>
+                    <h1 class="text-xl font-bold text-center lg:text-2xl text-wtit">Link Pendataan Sekolah</h1>
                     <div class="flex flex-wrap mt-2">
-                        <div class="h-max flex flex-wrap self-center w-full px-4 py-4 mx-auto">
+                        <div class="flex flex-wrap self-center w-full px-4 py-4 mx-auto h-max">
                             <div
                                 class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
-                                <img src="img/Logo Kab tang.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <img src="img/Logo Kab tang.png" alt="logo" class="pb-2 mx-auto h-14">
                                 <a href="https://simasn.tangerangkab.go.id/" alt="tombol" target="_blank">
                                     <h4
-                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        class="text-sm font-extrabold text-center bg-transparent text-wtit hover:text-wtitt lg:text-xl">
                                         SIM ASN</h4>
                                 </a>
                             </div>
                             <div
                                 class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
-                                <img src="img/Logo ANBK.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <img src="img/Logo ANBK.png" alt="logo" class="pb-2 mx-auto h-14">
                                 <a href="https://anbk.kemdikbud.go.id/" alt="tombol" target="_blank">
                                     <h4
-                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        class="text-sm font-extrabold text-center bg-transparent text-wtit hover:text-wtitt lg:text-xl">
                                         A N B K</h4>
                                 </a>
                             </div>
                             <div
                                 class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
-                                <img src="img/Logo Dapodik.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <img src="img/Logo Dapodik.png" alt="logo" class="pb-2 mx-auto h-14">
                                 <a href="https://dapo.kemdikbud.go.id/" alt="tombol" target="_blank">
                                     <h4
-                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        class="text-sm font-extrabold text-center bg-transparent text-wtit hover:text-wtitt lg:text-xl">
                                         DAPODIK</h4>
                                 </a>
                             </div>
                             <div
                                 class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
-                                <img src="img/Logo BOS.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <img src="img/Logo BOS.png" alt="logo" class="pb-2 mx-auto h-14">
                                 <a href="https://bos.kemdikbud.go.id/portal/welcome" alt="tombol" target="_blank">
                                     <h4
-                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        class="text-sm font-extrabold text-center bg-transparent text-wtit hover:text-wtitt lg:text-xl">
                                         BOS ONLINE</h4>
                                 </a>
                             </div>
                             <div
                                 class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
-                                <img src="img/Logo Mysapk.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <img src="img/Logo Mysapk.png" alt="logo" class="pb-2 mx-auto h-14">
                                 <a href="https://mysapk.bkn.go.id/" alt="tombol" target="_blank">
                                     <h4
-                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        class="text-sm font-extrabold text-center bg-transparent text-wtit hover:text-wtitt lg:text-xl">
                                         MY SAPK</h4>
                                 </a>
                             </div>
                             <div
                                 class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
-                                <img src="img/Logo NISN.png" alt="logo" class="h-14 pb-2 mx-auto">
+                                <img src="img/Logo NISN.png" alt="logo" class="pb-2 mx-auto h-14">
                                 <a href="https://nisn.data.kemdikbud.go.id/" alt="tombol" target="_blank">
                                     <h4
-                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        class="text-sm font-extrabold text-center bg-transparent text-wtit hover:text-wtitt lg:text-xl">
                                         N I S N</h4>
                                 </a>
                             </div>
                             <div
                                 class="relative w-[190px] mx-auto md:w-[240px] my-auto mt-2 p-4 h-max rounded-3xl shadow-md hover:shadow-lg hover:shadow-black hover:-translate-y-5 duration-500">
-                                <img src="img/Logo ARKAS.PNG" alt="logo" class="h-14 pb-2 mx-auto">
+                                <img src="img/Logo ARKAS.PNG" alt="logo" class="pb-2 mx-auto h-14">
                                 <a href="https://arkas.kemdikbud.go.id/" alt="tombol" target="_blank">
                                     <h4
-                                        class="text-wtit hover:text-wtitt lg:text-xl text-sm font-extrabold text-center bg-transparent">
+                                        class="text-sm font-extrabold text-center bg-transparent text-wtit hover:text-wtitt lg:text-xl">
                                         ARKAS</h4>
                                 </a>
                             </div>
@@ -429,37 +431,69 @@
         <!-- Tautan End -->
 
         <!-- Contact -->
-        <section id="Contact" class="lg:px-32 dark:bg-slate-700 pt-20 pb-20">
+        <section id="Contact" class="pt-20 pb-20 lg:px-32 dark:bg-slate-700">
             <div class="container">
                 <div class="w-full px-4">
-                    <h1 class="lg:text-2xl text-wtit text-xl font-bold text-center">Contact</h1>
-                    <h2 class="lg:text-5xl text-wtitt text-4xl font-bold text-center">Hubungi<span
-                            class="md:visible lg:text-5xl text-wtit text-4xl italic"> Kami</span></h2>
+                    <h1 class="text-xl font-bold text-center lg:text-2xl text-wtit">Contact</h1>
+                    <h2 class="text-4xl font-bold text-center lg:text-5xl text-wtitt">Hubungi<span
+                            class="text-4xl italic md:visible lg:text-5xl text-wtit"> Kami</span></h2>
                     <p
-                        class="md:w-[50%] mx-auto text-sm text-center lg:text-base text-wpara font-semibold mt-2 font-sans">
+                        class="md:w-[50%] mx-auto text-sm text-center lg:text-base text-wpara font-semibold mt-2 font-sans pb-2">
                         Kirimkan pertanyaan anda seputar Sekolah dengan mengisi form Kontak dibawah ini</p>
-                    <form class="pt-5">
+                        <form class="pt-1" name="tesa-kontak">
+                        <!-- alert sukses -->
+                            <div id="alert-3" class="hidden p-4 mb-4 bg-green-100 rounded-lg my-alert dark:bg-green-200" role="alert">
+                                <div class="flex">
+                                    <svg class="flex-shrink-0 w-5 h-5 text-green-700 dark:text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                                <div class="ml-3 text-sm font-medium text-green-700 dark:text-green-800">
+                                  Terimakasih! Pesan Anda berhasil dikirim ke <a href="#" class="font-semibold underline hover:text-green-800 dark:hover:text-green-900">SDN TELUKNAGA I</a>, Kecamatan Teluknaga.
+                                </div>
+                                <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green-100 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8 dark:bg-green-200 dark:text-green-600 dark:hover:bg-green-300" data-dismiss-target="#alert-3" aria-label="Close">
+                                  <span class="sr-only">Close</span>
+                                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                                </div>
+                              </div>
+                          <!-- alert sukses -->
+                        <!-- alert gagal -->
+                        <div id="alert-2" class="hidden p-4 mb-4 bg-red-100 rounded-lg alert-gagal dark:bg-red-200" role="alert">
+                                <div class="flex">
+                                <svg class="flex-shrink-0 w-5 h-5 text-red-700 dark:text-red-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                                <div class="ml-3 text-sm font-medium text-green-700 dark:text-green-800">
+                                    Maaf! Pesan Anda gagal dikirim, periksa koneksi anda.
+                                  </div>
+                                <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-red-100 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex h-8 w-8 dark:bg-red-200 dark:text-red-600 dark:hover:bg-red-300" data-dismiss-target="#alert-2" aria-label="Close">
+                                  <span class="sr-only">Close</span>
+                                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                              </div>
+                        </div>
+                          <!-- alert gagal -->
                         <div class="pb-4">
-                            <label for="name" class="text-wtit text-base font-bold">Nama</label>
-                            <input type="text" id="name"
-                                class="bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt w-full h-8 p-3 rounded-md shadow-sm">
+                            <label for="name" class="text-base font-bold text-wtit">Nama</label>
+                            <input type="text" id="name" name="nama"
+                                class="w-full h-8 p-3 rounded-md shadow-sm bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt">
                         </div>
                         <div class="pb-4">
-                            <label for="email" class="text-wtit text-base font-bold">E-Mail</label>
-                            <input type="email" id="email"
-                                class="bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt w-full h-8 p-3 rounded-md shadow-sm">
+                            <label for="email" class="text-base font-bold text-wtit">E-Mail</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full h-8 p-3 rounded-md shadow-sm bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt">
                         </div>
                         <div class="pb-4">
-                            <label for="message" class="text-wtit text-base font-bold">Pesan</label>
-                            <textarea type="email" id="name"
-                                class="h-44 bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt w-full p-3 rounded-md shadow-sm"></textarea>
+                            <label for="message" class="text-base font-bold text-wtit">Pesan</label>
+                            <textarea type="email" id="name" name="pesan"
+                                class="w-full p-3 rounded-md shadow-sm h-44 bg-slate-200 text-wtit shadow-wtit focus:outline-none focus:ring-wtitt focus:ring-1 focus:border-wtitt hover:ring-1 hover:ring-wtitt"></textarea>
                         </div>
-                        <button
-                            class="ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt hover:-translate-y-2 hover:shadow-2xl shadow-black hover:shadow-black flex w-2/3 py-2 mx-auto my-2 duration-500 rounded-full shadow-xl">
+                        <button id="btn-kirim"
+                            class="flex w-2/3 py-2 mx-auto my-2 duration-500 rounded-full shadow-xl ring-4 ring-wtit hover:ring-transparent hover:bg-wtitt hover:-translate-y-2 hover:shadow-2xl shadow-black hover:shadow-black">
                             <a href="#" alt="tombol" class="flex mx-auto">
-                                <h5 class="text-wtit hover:text-white lg:text-xl text-sm font-extrabold">Kirim Pesan
+                                <h5 class="text-xl font-extrabold text-wtit hover:text-white lg:text-xl">Kirim Pesan
                                 </h5>
                             </a>
+                            <svg role="status" id="btn-loading" class="hidden w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"></path>
+                                <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"></path>
+                                </svg>
                         </button>
                     </form>
                 </div>
@@ -468,71 +502,71 @@
         <!-- Contact End -->
 
         <!-- Footer -->
-        <section id="Footer" class="lg:px-28 bg-slate-900 pt-20">
+        <section id="Footer" class="pt-20 lg:px-28 bg-slate-900">
             <div class="container">
                 <div class="flex flex-wrap py-10">
-                    <div class="text-wpara md:w-1/3 w-full px-4 py-5">
+                    <div class="w-full px-4 py-5 text-wpara md:w-1/3">
                         <h2 class="text-3xl text-white">TESA-1972</h2>
                         <h4 class="pt-2">Hubungi Kami</h4>
                         <p>sdn.teluknaga1@gmail.com</p>
                         <p>Jl. Raya Kampung Melayu Desa Teluknaga Kecamatan Teluknaga</p>
                         <p>Kabupaten Tangerang</p>
                     </div>
-                    <div class="md:w-1/3 w-full px-4 py-5">
-                        <h2 class="md:text-center pb-4 text-white">Clients</h2>
-                        <li class="md:text-center list-none">
+                    <div class="w-full px-4 py-5 md:w-1/3">
+                        <h2 class="pb-4 text-white md:text-center">Clients</h2>
+                        <li class="list-none md:text-center">
                             <a href="https://www.kemdikbud.go.id" target="_blank"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Kemendikbud
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">Kemendikbud
                                 RI</a>
                         </li>
-                        <li class="md:text-center list-none">
+                        <li class="list-none md:text-center">
                             <a href="https://tangerangkab.go.id/" target="_blank"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Kabupaten
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">Kabupaten
                                 Tangerang</a>
                         </li>
-                        <li class="md:text-center list-none">
+                        <li class="list-none md:text-center">
                             <a href="https://tangerangkab.go.id/teluknaga" target="_blank"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Kecamatan
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">Kecamatan
                                 Teluknaga</a>
                         </li>
-                        <li class="md:text-center list-none">
+                        <li class="list-none md:text-center">
                             <a href="#Home" target="_blank"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">SDN
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">SDN
                                 Teluknaga I</a>
                         </li>
                     </div>
-                    <div class="md:w-1/3 w-full px-4 py-5">
-                        <h2 class="lg:text-right pb-4 text-white">Tautan</h2>
-                        <li class="lg:text-right list-none">
+                    <div class="w-full px-4 py-5 md:w-1/3">
+                        <h2 class="pb-4 text-white lg:text-right">Tautan</h2>
+                        <li class="list-none lg:text-right">
                             <a href="#Home"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Beranda</a>
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">Beranda</a>
                         </li>
-                        <li class="lg:text-right list-none">
+                        <li class="list-none lg:text-right">
                             <a href="#About"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Tentang
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">Tentang
                                 Kami</a>
                         </li>
-                        <li class="lg:text-right list-none">
+                        <li class="list-none lg:text-right">
                             <a href="#Galery"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Galery</a>
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">Galery</a>
                         </li>
-                        <li class="lg:text-right list-none">
+                        <li class="list-none lg:text-right">
                             <a href="#Tautan"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Clients</a>
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">Clients</a>
                         </li>
-                        <li class="lg:text-right list-none">
+                        <li class="list-none lg:text-right">
                             <a href="#Contact"
-                                class="text-wpara hover:text-wtitt inline-block mb-3 text-sm font-semibold list-none">Contact</a>
+                                class="inline-block mb-3 text-sm font-semibold list-none text-wpara hover:text-wtitt">Contact</a>
                         </li>
                     </div>
                 </div>
-                <div class="border-wpara w-full pb-10 mx-auto border-t-2">
+                <div class="w-full pb-10 mx-auto border-t-2 border-wpara">
                     <div class="flex items-center justify-center mt-5 mb-5">
                         <!-- youtube -->
                         <a href="#" target="_blank"
-                            class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-red-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                            class="flex items-center justify-center mr-1 duration-300 border-2 rounded-full w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-red-700">
                             <svg role="img" width="20"
-                                class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                class="duration-300 fill-current hover:scale-150 hover:rotate-12 hover:-translate-y-3"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <title>YouTube</title>
                                 <path
@@ -543,9 +577,9 @@
                         </a>
                         <!-- instagram -->
                         <a href="#" target="_blank"
-                            class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-pink-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                            class="flex items-center justify-center mr-1 duration-300 border-2 rounded-full w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-pink-700">
                             <svg role="img" width="20"
-                                class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                class="duration-300 fill-current hover:scale-150 hover:rotate-12 hover:-translate-y-3"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <title>Instagram</title>
                                 <path
@@ -557,9 +591,9 @@
                         </a>
                         <!-- facebook -->
                         <a href="#" target="_blank"
-                            class="w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-blue-700 flex items-center justify-center mr-1 duration-300 border-2 rounded-full">
+                            class="flex items-center justify-center mr-1 duration-300 border-2 rounded-full w-7 h-7 md:w-9 md:h-9 md:mr-2 border-wtitt hover:bg-wtitt text-wtitt hover:text-blue-700">
                             <svg role="img" width="20"
-                                class="hover:scale-150 hover:rotate-12 hover:-translate-y-3 duration-300 fill-current"
+                                class="duration-300 fill-current hover:scale-150 hover:rotate-12 hover:-translate-y-3"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <title>Facebook</title>
                                 <path
@@ -568,9 +602,9 @@
                             </svg>
                         </a>
                     </div>
-                    <p class="text-wpara text-xs text-center">Copyright © 2022 SD NEGERI TELUKNAGA I All rights reserved
+                    <p class="text-xs text-center text-wpara">Copyright © 2022 SD NEGERI TELUKNAGA I All rights reserved
                     </p>
-                    <p class="text-wpara text-xs text-center">Powered by <span><a href="https://tailwindcss.com/"
+                    <p class="text-xs text-center text-wpara">Powered by <span><a href="https://tailwindcss.com/"
                                 class="hover:text-wtitt">Tailwind CSS 3</a></span></p>
                 </div>
             </div>
@@ -579,11 +613,49 @@
 
         <!-- Back -->
         <a href="#Home" id="to-top" class="fixed hidden bottom-2 right-2 z-[9999] rounded-2xl">
-            <img src="img/logosd.png" alt="atas" class="w-14 h-14 hover:scale-90 duration-200">
+            <img src="img/logosd.png" alt="atas" class="duration-200 w-14 h-14 hover:scale-90">
         </a>
         <!-- Back -->
 
         <script src="dist/js/script.js"></script>
+        <!-- jameswilson -->
+        <form name="submit-to-google-sheet">
+            <input name="email" type="email" placeholder="Email" required>
+            <button type="submit">Send</button>
+          </form>
+          
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbytaM6yns2WxhgzgaqJ4lJMFKLT0AcCv61bmptQGN1v60EUzJt8dANsfdwn2H5pWNWx/exec';
+            const form = document.forms['tesa-kontak']
+            // const btnKirim = document.querySelector('#btn-kirim');
+            const btnLoading = document.querySelector('#btn-loading');
+            const myAlert = document.querySelector('.my-alert');
+            const alertGagal = document.querySelector('.alert-gagal');
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+            //   ketika submit
+            btnLoading.classList.toggle('hidden')
+            // btnKirim.classList.toggle('hidden')
+            myAlert.classList.toggle('hidden')
+            // alert error
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                btnLoading.classList.toggle('hidden')
+                form.reset()
+                console.log('Success!', response)
+                myAlert.classList.toggle('')   
+            })
+            .catch(error => 
+            console.error)
+            
+           
+            
+           
+                           })
+          </script>
+        <!-- jameswilson -->
     </body>
 
 </html>
