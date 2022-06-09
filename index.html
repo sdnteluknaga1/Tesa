@@ -179,7 +179,7 @@
                         <button class="flex items-center justify-around p-1 my-2 rounded-full bg-wtit w-36">
                             <h5 class="text-xs font-extrabold text-white lg:text-sm">Kontak Kami</h5>
                             <!-- youtube -->
-                            <a href="https://api.whatsapp.com/send?phone=089601268994" target="_blank"
+                            <a href="https://api.whatsapp.com/send?phone=089611114444" target="_blank"
                                 class="flex items-center justify-center duration-300 border-2 rounded-full w-7 h-7 md:w-9 md:h-9 border-wtitt hover:border-0 hover:bg-transparent text-wtitt hover:text-green-500">
                                 <svg role="img" width="20"
                                     class="duration-300 fill-current hover:scale-150 hover:rotate-12 hover:-translate-y-3"
@@ -425,7 +425,27 @@
                 <p
                     class="md:w-[50%] mx-auto text-sm text-center lg:text-base text-wpara font-semibold mt-2 font-sans pb-2">
                     Kirimkan pertanyaan anda seputar Sekolah dengan mengisi form Kontak dibawah ini</p>
+
                 <form class="pt-1" name="tesa-kontak">
+                    <!-- alert sukses -->
+                    <!-- alert -->
+                    <div class="relative hidden w-full px-4 py-3 bg-green-100 border border-red-400 rounded my-alert text-wtit"
+                        id="my-alert" role="alert">
+                        <strong class="font-bold">Terimakasih!</strong>
+                        <span class="inline">Pesan anda sudah terkirim.</span>
+                        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                            <svg class="w-6 h-6 fill-current text-wtit" role="button" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20">
+                                <title>Close</title>
+                                <path
+                                    d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <!-- End alert -->
+
+                    <!-- alert sukses -->
+
                     <div class="pb-4">
                         <label for="name" class="text-base font-bold text-wtit">Nama</label>
                         <input type="text" id="name" name="nama"
@@ -580,7 +600,10 @@
         // const btnKirim = document.querySelector('#btn-kirim');
         const btnLoading = document.querySelector('#btn-loading');
         const myAlert = document.querySelector('.my-alert');
-        const alertGagal = document.querySelector('.alert-gagal');
+
+        myAlert.addEventListener('click', function () {
+            myAlert.classList.toggle('hidden');
+        })
 
         form.addEventListener('submit', e => {
             e.preventDefault()
@@ -589,6 +612,7 @@
             // btnKirim.classList.toggle('hidden')
             myAlert.classList.toggle('hidden')
             // alert error
+
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
@@ -599,10 +623,6 @@
                 })
                 .catch(error =>
                     console.error)
-
-
-
-
         })
     </script>
     <!-- jameswilson -->
