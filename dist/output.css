@@ -704,8 +704,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 8rem;
 }
 
-.w-56 {
-  width: 14rem;
+.w-80 {
+  width: 20rem;
 }
 
 .w-36 {
@@ -787,6 +787,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-around {
   justify-content: space-around;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .self-start {
