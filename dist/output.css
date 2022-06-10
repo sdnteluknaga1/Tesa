@@ -586,10 +586,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -648,10 +644,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-3 {
   height: 0.75rem;
-}
-
-.h-\[700px\] {
-  height: 700px;
 }
 
 .h-max {
@@ -956,8 +948,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2.5rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
+.pt-40 {
+  padding-top: 10rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
 }
 
 .pt-10 {
@@ -966,6 +962,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-20 {
   padding-bottom: 5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .pb-4 {
@@ -1389,6 +1389,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     visibility: visible;
   }
 
+  .md\:mt-20 {
+    margin-top: 5rem;
+  }
+
   .md\:mr-2 {
     margin-right: 0.5rem;
   }
@@ -1433,10 +1437,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 1024px) {
   .lg\:static {
     position: static;
-  }
-
-  .lg\:mt-52 {
-    margin-top: 13rem;
   }
 
   .lg\:mt-9 {
